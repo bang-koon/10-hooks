@@ -1,15 +1,6 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
+import React from "react";
+import { useTitle } from "./api/useTitle";
 
-const useTitle = (initialTitle) => {
-  const [title, setTitle] = useState(initialTitle);
-  const updateTitle = () => {
-    const htmlTitle = document.querySelector("title");
-    htmlTitle.innerText = title;
-  };
-  useEffect(updateTitle, [title]);
-  return setTitle;
-};
 const App = () => {
   const titleUpdater = useTitle("Loading");
   setTimeout(() => titleUpdater("home"), 3000);
