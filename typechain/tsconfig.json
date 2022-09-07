@@ -4,8 +4,9 @@
     "outDir": "build", // 컴파일 될 js파일 경로
     "target": "ES6",
     "moduleResolution": "Node", // 모듈 에러가 떠서 추가함
-    "lib": ["ES6", "DOM"], // JS를 실행시킬 환경, DOM은 브라우저(자동완성 가능)
+    "lib": ["ES6"], // JS를 실행시킬 환경, DOM은 브라우저(자동완성 가능)
     "strict": true,
-    "allowJs": true // 말 그대로 JS 허용
+    "esModuleInterop": true, // for import
+    "module": "CommonJS" // 브라우저 앱이면 UMD
   }
 }
